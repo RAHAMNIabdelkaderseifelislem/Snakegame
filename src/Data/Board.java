@@ -15,6 +15,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import Data.levels;
+
 public class Board extends JPanel implements ActionListener {
 
     private final int B_WIDTH = 300;
@@ -22,7 +24,7 @@ public class Board extends JPanel implements ActionListener {
     private final int DOT_SIZE = 10;
     private final int ALL_DOTS = 900;
     private final int RAND_POS = 29;
-    private final int DELAY = 70;
+    private int DELAY ;
 
     private final int x[] = new int[ALL_DOTS];
     private final int y[] = new int[ALL_DOTS];
@@ -42,7 +44,9 @@ public class Board extends JPanel implements ActionListener {
     private Image apple;
     private Image head;
 
-    public Board() {
+    public Board(int delay) {
+    	
+    	DELAY = delay;
         
         initBoard();
     }
